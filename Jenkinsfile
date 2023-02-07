@@ -12,9 +12,9 @@ pipeline {
                 }
             }
         }
-        stage('Deploy to Tomcat server'){
+        stage('Build and create docker image'){
             steps{
-                build job: 'Deploy_App'
+                sh "docker build . -t SpringBootDockerApp:${env.BUILD_ID}"
             }
         }
     }
