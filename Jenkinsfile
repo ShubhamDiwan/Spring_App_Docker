@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build and create docker image'){
             steps{
-                sh "docker build . -t SpringBootDockerApp:${env.BUILD_ID}"
+                sh "docker build . -t springbootdockerapp:${env.BUILD_ID}"
             }
         }
     }
