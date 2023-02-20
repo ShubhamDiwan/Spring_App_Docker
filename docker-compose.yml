@@ -5,4 +5,4 @@ services:
     build: .
     image: docker_spring_app
     ports:
-      - 8080:8080
+      - 8005:8080
