@@ -1,9 +1,7 @@
-FROM openjdk:11.0.12-jdk-slim
+FROM tomcat:8.5-jdk11-openjdk-slim
 
 ADD **/*.war /root/apache-tomcat-9.0.71/webapps
 
-ADD **/*.war /mkyong.war
+EXPOSE 8075
 
-ENTRYPOINT ["sh","-c","java -jar /mkyong.war"]
-
-EXPOSE 8088
+CMD ["catalina.sh","run]
